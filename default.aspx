@@ -11,21 +11,28 @@
     <div>
     Ryan's Mortgage Calculator
         
-        <br /><br />
-     
+        <br />
+        *
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
-                  
+        <asp:RequiredFieldValidator ID="amountRFV" runat="server" ControlToValidate="tbLoanAmt" ErrorMessage="Please enter a loan amount."></asp:RequiredFieldValidator>          
+        
         <br /><br />      
-        
+        *
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
-        
-        <br /><br />
+        <asp:RequiredFieldValidator ID="interestRFV" runat="server" ControlToValidate="tbAnnualInterest" ErrorMessage="Please enter an interest rate."></asp:RequiredFieldValidator>
 
+        <br /><br />
+        *
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
-        
+        <asp:RequiredFieldValidator ID="termRFV" runat="server" ControlToValidate="tbLoanTerm" ErrorMessage="Please enter a loan term."></asp:RequiredFieldValidator>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
         <br /><br />
 
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnClearAll" runat="server" Text="Clear All" />
         
         <br /><br />
                 
