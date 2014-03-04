@@ -4,12 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Ryan's Mortgage Calculator</title>
+
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-    Ryan's Mortgage Calculator
+    <div style="position:relative">
+    <h1>Ryan's Mortgage Calculator</h1>
         
         <br />
         *
@@ -35,14 +38,19 @@
         <asp:Button ID="btnClearAll" runat="server" Text="Clear All" />
         
         <br /><br />
-                
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
         
-        <br /><br />
-        
-        <asp:GridView ID="loanGridView" runat="server" />
+        Welcome to my mortgage calculator. Please complete all the fields above to have your monthly payment  and loan repayment schedule calculated for you. <br /><br />
+           
+        <h2>Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label></h2>
+        </div>
 
-    </div>
+        <div id="table">
+        <br />
+        
+        <asp:GridView ID="loanGridView" runat="server" HorizontalAlign="Center" CssClass="cssgridview" />
+        
+        <br />
+        </div>
     </form>
 </body>
 </html>
